@@ -1,0 +1,48 @@
+﻿<Window x:Class="szamologep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:szamologep"
+        mc:Ignorable="d"
+        Title="Szamológép" Height="650" Width="450">
+    <Grid Background="#FFADD1EA">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Label FontSize="16">A szám:</Label>
+            <TextBox x:Name="txtAszam" Width="100"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Label FontSize="16">Bszám:</Label>
+            <TextBox x:Name="txtBszam" Width="100"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Click="btnOsszead_Click" x:Name="btnOsszead" Content="+" Width="45" Background="#FFBCDFDA" FontSize="16"/>
+            <Button Click="btnKivon_Click" x:Name="btnKivon" Content="-" Width="45" Background="#FFBCDFDA" FontSize="16"/>
+            <Button Click="btnSzoroz_Click" x:Name="btnSzoroz" Content="*" Width="45" Background="#FFBCDFDA" FontSize="16"/>
+            <Button Click="btnOszt_Click" x:Name="btnOszt" Content="/" Width="45" Background="#FFBCDFDA" FontSize="16"/>
+            <Button Click="btnHatvanyozas_Click" x:Name="btnHatvanyozas" Content="A^B" Width="45" Background="#FFBCDFDA" FontSize="16"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
